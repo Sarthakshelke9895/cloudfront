@@ -18,6 +18,10 @@
     display: flex;
     align-items: center;
     background-color: transparent;
+    cursor: pointer;
+}
+.img_and_logo:hover{
+  cursor: pointer;
 }
 
 .img_and_logo img {
