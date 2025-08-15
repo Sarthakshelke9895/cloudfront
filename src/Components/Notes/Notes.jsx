@@ -13,10 +13,11 @@ const Notes = ({ backendUrl = 'https://cloud-bflt.onrender.com' }) => {
     const date = new Date(dateString);
     return date.toLocaleString(); // e.g., 8/15/2025, 2:30:45 PM
   };
-
   useEffect(() => {
     fetchNotes();
+        // eslint-disable-next-line
   }, []);
+  
 
   const fetchNotes = async () => {
     try {
