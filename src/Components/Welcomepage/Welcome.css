@@ -1,0 +1,103 @@
+.parentw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url(../../Assests/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* use min-height instead of height for better fit */
+    padding: 20px; /* prevent text from touching screen edges */
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #e0e0e0;
+    text-align: center; /* center text for smaller screens */
+    background-color: transparent;
+    margin-bottom: 60px;
+}
+
+.heading h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem); /* scales with screen size */
+    font-weight: 300;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+.heading h2 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 200;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+.heading p {
+    font-size: clamp(14px, 2.5vw, 16px);
+    background-color: transparent;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+p button {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: 250;
+    font-size: clamp(14px, 2vw, 16px);
+    letter-spacing: 1px;
+    transition: 0.3s ease-in;
+}
+
+p button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.get-started-btn {
+    background: linear-gradient(90deg, #656f71, #215ea4);
+    color: #e0e0e0;
+    padding: 12px 24px;
+    font-size: clamp(16px, 3vw, 22px);
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 0px 1px rgba(0, 122, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.get-started-btn:hover {
+    background: linear-gradient(90deg, #215ea4, #656f71);
+}
+
+/* ✅ Responsive Tweaks */
+@media (max-width: 768px) {
+    .heading {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 2.5rem;
+    }
+    .heading h2 {
+        font-size: 1rem;
+    }
+    .get-started-btn {
+        padding: 10px 20px;
+    }
+}

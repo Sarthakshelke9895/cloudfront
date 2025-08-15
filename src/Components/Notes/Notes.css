@@ -1,0 +1,142 @@
+.parentNotes {
+    display: flex;
+    flex-direction: column;
+    min-height: 1000vh;
+    color: #e0e0e0;
+    padding-top: 100px;
+  }
+  
+  .notes-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    margin-left: 250px; /* adjust if Sidebar width is different */
+    flex: 1;
+  }
+  
+  .add-note {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+  }
+  
+  .add-note textarea {
+    resize: none;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(97, 97, 97, 0.9);
+   outline: none;
+    color: #e0e0e0;
+    height: 130px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .add-note button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #656f71, #215ea4);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 250;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .add-note button:hover {
+    background-color: #5200cc;
+  }
+  .note-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #e0e0e0;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+    grid-auto-rows: min-content; /* row height adjusts to content */
+    align-items: start;          /* align each card to top */
+  }
+  
+  /* Individual note card */
+  .note-card {
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 120px;
+    word-break: break-word;
+    border: 1px solid rgba(97, 97, 97, 0.9);
+    height: auto;        /* allow dynamic height */
+  min-height: 0;
+
+  }
+  
+ 
+  .note-text {
+    margin: 25px 0 10px 0; /* leave space for date */
+    white-space: pre-wrap;
+    flex: 0 1 auto;  
+    font-size: 1.2rem;
+  }
+  
+  .note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    
+    flex-wrap: wrap;
+  }
+  
+  .action-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    transition: color 0.2s;
+  }
+  
+  .action-icon:hover {
+    color: #a3a2a4;
+  }
+  
+
+  @media (max-width: 768px) {
+    .notes-container {
+      margin-left: 0 !important; /* remove sidebar space */
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  
+    .notes-list {
+      grid-template-columns: 1fr; /* single column layout */
+      gap: 10px;
+    }
+  
+    .note-card {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .add-note textarea {
+      height: 100px;
+      font-size: 0.95rem;
+    }
+  
+    .add-note button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  

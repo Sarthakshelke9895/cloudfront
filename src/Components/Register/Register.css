@@ -1,0 +1,174 @@
+
+.parentR{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url(../../Assests/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.register-container {
+  background-color: rgba(0, 0, 0,0.01); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur the background */
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 0px 4px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.7s ease-in-out;
+ height: auto;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #e0e0e0;;
+  background: transparent;
+  letter-spacing: 1px;
+  font-weight: 350;
+
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px; /* Adjusted font size */
+  background-color: #e0e0e0;
+}
+
+ .input:focus {
+  background: #dfdada;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.loginstatement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.loginbuton{
+  padding: 1px 2px;
+  border-radius: 1px;
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+}
+.loginbuton:hover{
+cursor: pointer;
+text-decoration: underline;
+}
+.checkbox{
+  height: 18px;
+  width: 18px;
+  margin-right:5px ;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.label{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #e0e0e0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  
+}
+
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #656f71, #215ea4);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  font-weight: 250;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.register-container button:hover {
+  
+  background: linear-gradient(90deg, #215ea4, #656f71);
+ 
+  
+}
+
+.register-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+
+.form{
+  background-color: transparent;
+}
+.form p{
+  background-color: transparent;
+  color: #e0e0e0;
+  letter-spacing: 0.5px;
+  font-weight: 250;
+}
+
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 12px 0;
+}
+.error {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.input-group .icon {
+  color: #0d110d;
+  font-size: 18px;
+  background-color: transparent;
+  margin-right: 2px;
+}
+ .input-group #phone{
+  transform: rotate(90deg); /* change angle */
+}
+
+.input-group .input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px 5px ;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #0d110d;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,64 @@
+.nav {
+    color: #0D1117;     
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center logo by default */
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.img_and_logo {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.img_and_logo img {
+    height: 50px;
+    background-color: transparent;
+}
+
+.img_and_logo h1 {
+    background-color: transparent;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    font-weight: 250;
+    color: white;
+}
+
+.greeting {
+    background-color: transparent;
+}
+
+.greeting h3 {
+    color: #ffffff;
+    background-color: transparent;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Mobile: show hamburger */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      left: 20px;
+    }
+  
+    .img_and_logo {
+      margin: 0 auto;
+    }
+  }
+  

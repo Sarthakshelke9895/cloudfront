@@ -1,0 +1,399 @@
+.parent{
+  display: flex;
+  align-items: flex-start;
+  padding-top: 70px;
+  justify-content:center;
+  height: 1000vh;
+  background-color: #0D1117;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cloud-shell {
+  width: 100%;
+  padding: 0 12px;
+  background-color: transparent;
+
+}
+
+.cloud-card {
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid rgba(207, 10, 10, 0.2);
+  padding-left: 240px;
+  background-color: transparent;
+ 
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.toggle-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+.view-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  background-color: transparent;
+  background-color: transparent;
+}
+
+
+.cloud-title {
+  margin: 0 0 12px;
+  font-size: 30px;
+  color: white;
+  background-color: transparent;
+}
+
+.upload-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.548);
+  background-color: transparent;
+  
+
+}
+.upload_container{
+  border-radius:10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: black;  
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.163);
+
+
+}
+#upload_logo{
+  height: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.upload-text .bold {
+  font-weight: 600;
+  color: white;
+  background-color: black;
+
+
+}
+
+.upload-text .sub {
+  font-size: 13px;
+color: white;
+}
+
+.progress {
+  margin-top: 10px;
+  position: relative;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6f7cff, #00c6ff);
+  transition: width 0.2s;
+}
+
+
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: -22px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.list-wrap {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: transparent;
+  
+}
+
+.list-wrap.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  background-color: transparent;
+  
+}
+
+
+/* List view (default) */
+.file-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 15px;
+  border-radius: 10px;
+  color: #E0E0E0;
+  background-color:rgba(255, 235, 205, 0);
+  border: 1px solid rgba(255,255,255,0.15);
+  height: fit-content;
+  overflow: hidden;
+  background-color: transparent;
+
+
+}
+
+/* Grid view overrides */
+.grid .file-row {
+  flex-direction: column;  /* stack content vertically */
+  align-items: flex-start;
+  background-color: transparent;
+  
+}
+
+.grid .actions{
+  margin-top: 15px;
+  gap: 25px;
+  background-color: transparent;
+}
+.action_buttons{
+  height: 25px;
+
+  
+}
+.filename {
+  font-weight: 600;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.small {
+  font-size: 16px;
+  color: #B0B8C1; /* Subheading text */
+  margin-top: 5px;
+  background-color: transparent;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: transparent;
+  
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #B0B8C1; /* Subheading text */
+  background-color: transparent;
+}
+
+.actions .danger {
+  background: rgba(255,0,0,0.15);
+}
+
+.empty {
+  padding: 18px;
+  text-align: center;
+  color: white;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+
+ 
+  
+}
+
+.modal {
+  width: min(1080px, 98%);
+
+  border: 1px solid rgba(243, 228, 228, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+
+}
+
+.modal-header button {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  color:white;
+}
+
+.modal-body {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body img,
+.modal-body video {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 60vh;
+  border: none;
+}
+
+.modal-footer {
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.modal-footer .primary {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+
+}
+
+.modal-footer .danger {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+
+}
+
+.modal-footer button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+/* ----- RESPONSIVE STYLES ----- */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+  .parent {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    height: auto;
+  }
+
+  .cloud-card {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .list-wrap.grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .file-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filename {
+    font-size: 16px;
+  }
+
+  .small {
+    font-size: 12px;
+  }
+
+  .actions {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  /* Upload box */
+  .upload-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modal adjustments */
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-body img,
+  .modal-body video {
+    max-height: 60vh;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .cloud-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .header-row{
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .file-row {
+    padding: 12px;
+  }
+
+  .actions button {
+    font-size: 14px;
+    padding: 4px;
+  }
+}

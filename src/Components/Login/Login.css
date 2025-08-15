@@ -1,0 +1,93 @@
+
+.ParentL{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url(../../Assests/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login-container{
+    background-color: rgba(0, 0, 0,0.01); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur the background */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 0px 4px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.7s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+}
+.login-container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #e0e0e0;;
+    background: transparent;
+    letter-spacing: 1px;
+    font-weight: 350;
+}
+.login-container input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px; /* Adjusted font size */
+    background-color: #e0e0e0;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #656f71, #215ea4);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 250;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+  
+  }
+  
+  .login-container button:hover {
+    background: linear-gradient(90deg, #215ea4, #656f71); 
+  }
+
+  .mpin-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.209);
+    background-color:transparent;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .mpin-container input{
+    width: 40px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: transparent;
+  }
+  
+  .mpin-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  }
+  
