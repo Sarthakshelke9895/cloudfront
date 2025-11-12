@@ -8,7 +8,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Setup from './Components/SetupMpin/Setup';
 import Login from './Components/Login/Login';
 import Notes from './Components/Notes/Notes';
-
+import Contact from './Components/Contact/Contact';
 function App() {
   
   return (
@@ -21,6 +21,9 @@ function App() {
       <Route path="/setup" element={<Setup/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/notes" element={<Notes/>} />
+      <Route path="/contact" element={<Contact/>} />
+
+
 
       
     </Routes>

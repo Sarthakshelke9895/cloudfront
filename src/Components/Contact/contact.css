@@ -1,0 +1,189 @@
+/* Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-top: 100px;
+}
+
+/* Card */
+.contact-card {
+  width: 95%;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle white border */
+  text-align: center;
+  color: #f0f0f0; /* light text */
+}
+
+/* Titles */
+.contact-title {
+  font-size: 2rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Section */
+.contact-input-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-input {
+  flex: 1 1 250px;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: 1rem;
+  background: transparent;
+  color: #f0f0f0;
+}
+
+.contact-input::placeholder {
+  color: rgba(240, 240, 240, 0.7);
+}
+
+.contact-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Grid/List toggle */
+.view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.view-toggle button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.view-toggle button.active {
+  background: rgba(255,255,255,0.3);
+  color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+}
+
+/* Contacts Grid/List */
+.contacts-list.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.contacts-list.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Contact Card */
+.contact-item {
+  
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #f0f0f0;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.contact-item .overflow-content {
+  overflow-y: auto;
+  max-height: 130px;
+  padding-right: 0.3rem;
+}
+.contacts-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contacts-list.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+
+/* Contact Text */
+.contact-item strong,
+.contact-item span {
+  display: block;
+  word-wrap: break-word;
+  color: #f0f0f0;
+}
+
+/* Loader */
+.loader {
+  border: 4px solid rgba(240,240,240,0.2);
+  border-top: 4px solid #f0f0f0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 1rem auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contacts-list.grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-input-section {
+    flex-direction: column;
+  }
+
+  .view-toggle {
+    justify-content: center;
+  }
+  .contact-input{
+    flex: 1 1 20px;
+  }
+}
+
+.contacts-header h3{
+ text-align: left;
+ margin-left: 10px;
+}

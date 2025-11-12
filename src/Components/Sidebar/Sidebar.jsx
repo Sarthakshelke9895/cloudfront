@@ -14,6 +14,9 @@ const Sidebar = ({ isOpen }) => {
   const noteclick = () => {
     navigate('/notes');
   };
+  const contactclick =()=>{
+    navigate('/contact')
+  };
 
   return (
     <div className={`parentsidebar ${isOpen ? 'open' : ''}`}>
@@ -22,7 +25,7 @@ const Sidebar = ({ isOpen }) => {
         <button className="button-sidebar" onClick={fileclick}>
           <img src={files} alt="Files logo" className="sidebarlogos" /> Files
         </button>
-        <button className="button-sidebar">
+        <button className="button-sidebar" onClick={contactclick}>
           <img src={phone} alt="Phone logo" className="sidebarlogos" /> Contacts
         </button>
         <button className="button-sidebar" onClick={noteclick}>

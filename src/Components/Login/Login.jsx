@@ -33,7 +33,7 @@ const Login = () => {
       const mpinValue = mpinArray.join(""); 
       console.log(mpinValue)// e.g., "1234"
   
-      fetch("https://cloud-bflt.onrender.com/api/login-mpin", {
+      fetch("http://localhost:5000/api/login-mpin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phoneOrEmail, mpin: mpinValue })
@@ -42,7 +42,7 @@ const Login = () => {
         .then((data) => {
           if (data.success) {
             alert("Login successful:", data);
-            navigate('/dashboard')
+            navigate('/files')
           } else {
             alert("Invalid credentials");
           }

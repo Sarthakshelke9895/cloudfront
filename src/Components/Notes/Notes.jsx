@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 import { FaEdit,FaCopy,FaDownload,FaTrash } from 'react-icons/fa';
 
-const Notes = ({ backendUrl = 'https://cloud-bflt.onrender.com' }) => {
+const Notes = ({ backendUrl = 'http://localhost:5000' }) => {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState('');
   const [editingNoteId, setEditingNoteId] = useState(null);
@@ -89,7 +89,7 @@ const Notes = ({ backendUrl = 'https://cloud-bflt.onrender.com' }) => {
          <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       <Sidebar isOpen={isMenuOpen} />
          <div className="notes-container">
-    
+      
       <div className="add-note">
         <textarea
           value={noteText}
