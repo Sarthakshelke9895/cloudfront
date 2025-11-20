@@ -52,7 +52,7 @@ const Setup = () => {
     const mpinString = values.join("");
     console.log("Saving MPIN:", mpinString, "for phone:", phone);
 
-    fetch(`${process.env.REACT_APP_BACKEND}/api/register-full`, {
+    fetch("https://cloud-bflt.onrender.com/api/register-full", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, phone, email, password, mpin: mpinString })
