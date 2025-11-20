@@ -29,26 +29,46 @@ const Login = () => {
       }
     };
   
-    const handleLogin = () => {
-      const mpinValue = mpinArray.join(""); 
-      console.log(mpinValue)// e.g., "1234"
-  
-      fetch("https://cloud-bflt.onrender.com/api/login-mpin", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phoneOrEmail, mpin: mpinValue })
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.success) {
-            alert("Login successful:", data);
-            navigate('/files')
-          } else {
-            alert("Invalid credentials");
-          }
-        })
-        .catch((err) => console.error(err));
-    };
+   const handleLogin = async () => {
+  const mpinValue = mpinArray.join("");
+
+  if (mpinValue.length !== 4) {
+    alert("Please enter a 4-digit MPIN");
+    return;
+  }
+
+  try {
+    const res = await fetch("https://cloud-bflt.onrender.com/api/login-mpin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        phoneOrEmail,
+        mpin: mpinValue
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!data.success) {
+      alert("Invalid credentials");
+      return;
+    }
+
+    // ✅ Store JWT token
+    localStorage.setItem("token", data.token);
+
+    // Optional: store user info
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    alert("Login Successful");
+
+    navigate("/files");
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong");
+  }
+};
+
   return (
     <div className='ParentL'>
         <Navbar/>

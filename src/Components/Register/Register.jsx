@@ -4,6 +4,8 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FaUser, FaPhone, FaEnvelope, FaLock } from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
+
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -53,12 +55,16 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Form submitted successfully!");
-      console.log("User Registered")
-      // You can send form data to backend here
+      await axios.post("https://cloud-bflt.onrender.com/api/register", {
+  name: form.username,
+  email: form.email,
+  phone: form.phone,
+  password: form.password
+});
+ 
     
       e.preventDefault();
       navigate("/setup", { 
@@ -66,21 +72,14 @@ const Register = () => {
           name: form.username, // or form.name if that's your input
           phone: form.phone,
           email: form.email,
-          password: form.password,
+          
 
        }
        
       });
-      console.log(this.state.first) 
-
-
-
+      
     }
-    
- 
   };
-
-
 
   return (
     <div className="parentR">
