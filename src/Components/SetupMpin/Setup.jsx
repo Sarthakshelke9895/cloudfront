@@ -52,7 +52,7 @@ const Setup = () => {
     const mpinString = values.join("");
     console.log("Saving MPIN:", mpinString, "for phone:", phone);
 
-    fetch("https://cloud-bflt.onrender.com/api/register-full", {
+    fetch(`${process.env.REACT_APP_BACKEND}/api/register-full`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, phone, email, password, mpin: mpinString })
@@ -60,7 +60,7 @@ const Setup = () => {
       .then((res) => res.json())
       .then((data) => {
         alert("Registration complete!");
-        navigate("/dashboard", { state: { name: data.name } });
+        navigate("/files", { state: { name: data.name } });
       })
       .catch((err) => {
         console.error(err);

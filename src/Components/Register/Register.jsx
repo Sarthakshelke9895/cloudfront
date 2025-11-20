@@ -57,6 +57,7 @@ const Register = () => {
     e.preventDefault();
     if (validate()) {
       alert("Form submitted successfully!");
+      console.log("User Registered")
       // You can send form data to backend here
     
       e.preventDefault();
@@ -65,9 +66,12 @@ const Register = () => {
           name: form.username, // or form.name if that's your input
           phone: form.phone,
           email: form.email,
-          password: form.password
-       } 
+          password: form.password,
+
+       }
+       
       });
+      console.log(this.state.first) 
 
 
 
@@ -151,7 +155,7 @@ const Register = () => {
           </label>
 
           <button >Register</button>
-          <p className="loginstatement">Already have an account? <div className="loginbuton" onClick={handle}>Login</div> </p>
+          <div className="loginstatement">Already have an account? <div className="loginbuton" onClick={handle}>Login</div> </div>
         </form>
       </div>
       <Footer />

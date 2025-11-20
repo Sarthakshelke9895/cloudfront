@@ -11,7 +11,9 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 
-const Hero = ({ backendUrl = 'https://cloud-bflt.onrender.com', clientOrigin = 'https://xaanaax.netlify.app' }) => {
+
+
+const Hero = ({  backendUrl =  process.env.REACT_APP_BACKEND, clientOrigin = process.env.REACT_APP_FRONTEND }) => {
   const [files, setFiles] = useState([]);
   const [selected, setSelected] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -19,6 +21,7 @@ const Hero = ({ backendUrl = 'https://cloud-bflt.onrender.com', clientOrigin = '
   const [progress, setProgress] = useState(0);
   const [queryRefresh, setQueryRefresh] = useState(0);
   const [gridView, setGridView] = useState(false); // toggle state
+ 
 
   useEffect(() => {
     

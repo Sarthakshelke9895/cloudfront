@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 import { FaEdit,FaCopy,FaDownload,FaTrash } from 'react-icons/fa';
 
-const Notes = ({ backendUrl = 'https://cloud-bflt.onrender.com' }) => {
+const Notes = ({ backendUrl = process.env.REACT_APP_BACKEND }) => {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState('');
   const [editingNoteId, setEditingNoteId] = useState(null);
