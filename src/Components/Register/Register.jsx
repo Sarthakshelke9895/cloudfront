@@ -4,7 +4,6 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FaUser, FaPhone, FaEnvelope, FaLock } from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
-import axios from "axios";
 
 
 const Register = () => {
@@ -58,12 +57,7 @@ const Register = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     if (validate()) {
-      await axios.post("https://cloud-bflt.onrender.com/api/register", {
-  name: form.username,
-  email: form.email,
-  phone: form.phone,
-  password: form.password
-});
+      
  
     
       e.preventDefault();
