@@ -47,12 +47,12 @@
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-.loginstatement{
-  background-color: transparent;
+#loginstatement{
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#dfdada;
+  background-color: transparent;
+  color: aqua;
 
 
 }

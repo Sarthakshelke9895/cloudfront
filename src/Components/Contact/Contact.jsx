@@ -29,7 +29,7 @@ const Contact = () => {
       callback: async (tokenResponse) => {
         setLoading(true);
         try {
-          const res = await fetch("https://cloud-bflt.onrender.com/sync-contacts", {
+          const res = await fetch("https://cloud-bflt.onrender.comz/sync-contacts", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ token: tokenResponse.access_token }),

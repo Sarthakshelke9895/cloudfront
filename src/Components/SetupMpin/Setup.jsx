@@ -14,7 +14,7 @@ const Setup = () => {
 
  
 
-  console.log("Phone received from registration:", phone);
+ 
 
   const handleChange = (index, value) => {
     // Only allow digits & max length 1
@@ -51,12 +51,20 @@ const Setup = () => {
 
     const mpinString = values.join("");
     console.log("Saving MPIN:", mpinString, "for phone:", phone);
+        const payload = { 
+      name, 
+      phone, 
+      email, 
+      password, 
+      mpin: mpinString 
+    };
 
-    fetch("https://cloud-bflt.onrender.com/api/register-full", {
+    fetch("http://localhost:5000/api/register-full", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, phone, email, password, mpin: mpinString })
+      body: JSON.stringify({ payload})
     })
+    
       .then((res) => res.json())
       .then((data) => {
         alert("Registration complete!");
@@ -66,6 +74,8 @@ const Setup = () => {
         console.error(err);
         alert("Error saving user");
       });
+       console.log("Phone received from registration:", phone);
+       console.log("Payload sent to backend:", payload);
   };
   return (
     

@@ -51,8 +51,17 @@
     display: none;
     cursor: pointer;
     color: white;
+    background-color: transparent;
   }
   
+  .icon2{
+    background-color: transparent;
+  }
+  /* hide completely no matter the screen size */
+.hidden-toggle {
+  display: none !important;
+}
+
   /* Mobile: show hamburger */
   @media (max-width: 768px) {
     .menu-toggle {
@@ -65,4 +74,5 @@
       margin: 0 auto;
     }
   }
+
   

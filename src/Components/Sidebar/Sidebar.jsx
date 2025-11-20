@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ isOpen }) => {
   const navigate = useNavigate();
+const user = JSON.parse(localStorage.getItem("user"));
+
 
   const fileclick = () => {
     navigate('/files');
@@ -20,7 +22,12 @@ const Sidebar = ({ isOpen }) => {
 
   return (
     <div className={`parentsidebar ${isOpen ? 'open' : ''}`}>
-      <h4>Welcome, Sarthak</h4>
+      <div className="greeting">
+      <h5 >Welcome,</h5>
+      <h4>{user?.name}</h4>
+      
+      </div>
+     
       <div className="buttonsidebar">
         <button className="button-sidebar" onClick={fileclick}>
           <img src={files} alt="Files logo" className="sidebarlogos" /> Files

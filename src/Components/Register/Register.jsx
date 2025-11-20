@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import { FaUser, FaPhone, FaEnvelope, FaLock } from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
 
-
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({
@@ -54,11 +53,11 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      
- 
+       console.log("User Entered Data:", form);
+    
     
       e.preventDefault();
       navigate("/setup", { 
@@ -66,14 +65,23 @@ const Register = () => {
           name: form.username, // or form.name if that's your input
           phone: form.phone,
           email: form.email,
-          
-
-       }
-       
+          password: form.password
+       } 
       });
-      
+    
+
+
+
     }
+    
+ 
   };
+
+  localStorage.setItem("user", JSON.stringify({
+  name: form.username,
+  email: form.email
+}));
+
 
   return (
     <div className="parentR">
@@ -148,7 +156,7 @@ const Register = () => {
           </label>
 
           <button >Register</button>
-          <div className="loginstatement">Already have an account? <div className="loginbuton" onClick={handle}>Login</div> </div>
+          <div id="loginstatement">Already have an account? <div className="loginbuton" onClick={handle}>Login</div> </div>
         </form>
       </div>
       <Footer />
