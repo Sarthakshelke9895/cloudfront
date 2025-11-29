@@ -11,7 +11,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 
-const Hero = ({ backendUrl = 'http://localhost:5000', clientOrigin = 'https://localhost:3000' }) => {
+const Hero = ({ backendUrl = 'https://cloud-bflt.onrender.com', clientOrigin = 'https://xaanaax.netlify.app' }) => {
   const [files, setFiles] = useState([]);
   const [selected, setSelected] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
