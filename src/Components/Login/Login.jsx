@@ -33,7 +33,7 @@ const Login = () => {
       const mpinValue = mpinArray.join(""); 
       console.log(mpinValue)// e.g., "1234"
   
-      fetch("http://localhost:5000/api/login-mpin", {
+      fetch("https://cloud-bflt.onrender.com/api/login-mpin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phoneOrEmail, mpin: mpinValue })
